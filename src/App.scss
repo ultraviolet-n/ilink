@@ -1,0 +1,15 @@
+@import "./adaptive.scss";
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+.container {
+    max-width: 1280px;
+    @include adaptiv-value("margin-right", 30, 16, 1);
+    @include adaptiv-value("margin-left", 30, 16, 1);
+    margin: 0 auto;
+}

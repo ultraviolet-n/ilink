@@ -1,0 +1,100 @@
+@import "../../adaptive.scss";
+
+.header {
+    background: #fff;
+    font-family: "Gilroy";
+    font-size: 18px;
+    line-height: 18px;
+    z-index: 5;
+
+    &-body {
+        @include adaptiv-value("padding-bottom", 32, 20, 1);
+        @include adaptiv-value("padding-top", 32, 20, 1);
+    }
+}
+
+.header-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    &__name {
+        display: flex;
+        align-items: center;
+    }
+    &__logo {
+    }
+}
+.header-name {
+    &__myname {
+        font-weight: 700;
+        @include adaptiv-value("padding-left", 18, 8, 1);
+        @include adaptiv-value("font-size", 18, 12, 1);
+        span {
+            @include adaptiv-value("font-size", 18, 12, 1);
+        }
+    }
+    &__photo {
+        border-radius: 5%;
+        height: 52px;
+        width: 52px;
+    }
+}
+.header-logo {
+    &__logo {
+        @include adaptiv-value("height", 52, 36, 1);
+        @include adaptiv-value("width", 85, 59, 1);
+    }
+}
+.header-row__button {
+    background: $maincolor;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    border-radius: 5%;
+    @include adaptiv-value("padding-right", 28, 18, 1);
+    @include adaptiv-value("padding-left", 28, 18, 1);
+    @include adaptiv-value("padding-bottom", 17, 12, 1);
+    @include adaptiv-value("padding-top", 17, 12, 1);
+    &:hover {
+        background: #797ddf;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+}
+.header-button {
+    &__profile {
+        display: none;
+    }
+    &__text {
+    }
+}
+
+@media (max-width: 530px) {
+    .header-button {
+        @include adaptiv-value("width", 52, 36, 1);
+        @include adaptiv-value("height", 52, 36, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        &__profile {
+            display: block;
+        }
+        &__text {
+            display: none;
+        }
+    }
+    .header-name__photo {
+        @include adaptiv-value("width", 52, 36, 1);
+        @include adaptiv-value("height", 52, 36, 1);
+    }
+    .header-name__myname span {
+        display: none;
+    }
+    .header-logo {
+        &__logo {
+            margin-left: -30px;
+        }}
+}

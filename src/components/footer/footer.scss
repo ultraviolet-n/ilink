@@ -1,0 +1,41 @@
+@import "../../adaptive.scss";
+.footer {
+    background-color: #fff;
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    z-index: 5;
+    @include adaptiv-value("padding-bottom", 20, 12, 1);
+    @include adaptiv-value("padding-top", 20, 12, 1);
+}
+.footer-row{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-row__copyrigh{
+    text-align: center;
+}
+.social-footer{
+    color:$maincolor;
+    font-size:20px;
+    display: flex;
+    gap:16px;
+ 
+}
+.social-footer__icon{
+    text-decoration: none;
+    color: $maincolor;
+    &:hover{
+        color:$maincolorhover;
+        transition: all 0.5s;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-row{
+       justify-content: center;
+       gap: 12px;
+      }
+}
