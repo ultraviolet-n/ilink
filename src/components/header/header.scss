@@ -5,7 +5,7 @@
     font-family: "Gilroy";
     font-size: 18px;
     line-height: 18px;
-    z-index: 5;
+    z-index: 1;
 
     &-body {
         @include adaptiv-value("padding-bottom", 32, 20, 1);

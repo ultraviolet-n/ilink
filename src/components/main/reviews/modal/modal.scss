@@ -1,0 +1,206 @@
+@import "../../../../adaptive.scss";
+
+.modal {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+    z-index: 3;
+}
+.modal__card {
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 676px;
+    gap: 20px;
+    background-color: #fff;
+    padding: 24px;
+    margin: 0 16px 0 16px;
+    opacity: 0;
+    transform: translate(0, -100%);
+    transition: all 0.5s;
+    font-family: Factor A;
+}
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+.modal__card.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+.header-card {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    font-weight: 500;
+    @include adaptiv-value("font-size", 24, 20, 1);
+    line-height: 28px;
+    letter-spacing: -0.0124em;
+    color: #333333;
+}
+.header-card__close {
+    cursor: pointer;
+    font-size: 18px;
+}
+.body-card {
+    &__title {
+        font-weight: 500;
+        @include adaptiv-value("font-size", 16, 14, 1);
+        @include adaptiv-value("padding-bottom", 14, 8, 1);
+        line-height: 20px;
+        letter-spacing: -0.0124em;
+    }
+    &__name {
+    }
+    &__errore {
+        padding-top: 2px;
+        font-size: 10px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.name {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    &__name {
+        border: solid 1px #e0e0e0;
+        flex: 1 1 auto;
+        border-radius: 2px;
+        min-height: 42px;
+        font-family: "Gilroy";
+        font-size: 14px;
+        line-height: 22px;
+        padding-left: 12px;
+        margin-right: 16px;
+    }
+    &__image {
+        display: flex;
+        align-items: center;
+        font-family: "Gilroy";
+        @include adaptiv-value("font-size", 18, 14, 1);
+        @include adaptiv-value("padding-top", 17, 12, 1);
+        @include adaptiv-value("padding-bottom", 17, 12, 1);
+        @include adaptiv-value("padding-right", 28, 12, 1);
+        @include adaptiv-value("padding-left", 28, 12, 1);
+        background: $maincolor;
+        transition: all 0.5s;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 2px;
+        span {
+            padding-right: 10px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        &:hover {
+            transition: all 0.5s;
+            background: $maincolorhover;
+        }
+        &-loadfile {
+            display: none;
+        }
+    }
+}
+@media (max-width: 370px) {
+    .name__name {
+        margin: 0;
+    }
+}
+@media (max-width: 426px) {
+    .body-card__errore {
+        flex-direction: column;
+    }
+}
+.body-text {
+    @include adaptiv-value("padding-top", 32, 24, 1);
+    &__title {
+        font-weight: 500;
+        @include adaptiv-value("font-size", 16, 14, 1);
+        @include adaptiv-value("padding-bottom", 14, 8, 1);
+        line-height: 20px;
+        letter-spacing: -0.0124em;
+    }
+
+    &__text {
+        font-family: "Gilroy";
+        font-size: 14px;
+        line-height: 22px;
+        border: solid 1px #e0e0e0;
+        width: 100%;
+        height: 105px;
+        border-radius: 2px;
+        padding: 12px;
+    }
+}
+.footer-card {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    @include adaptiv-value("margin-top", 40, 32, 1);
+    &__btn {
+        @include adaptiv-value("font-size", 16, 14, 1);
+        padding: 17px 28px 17px 28px;
+        background: $maincolor;
+        transition: all 0.5s;
+        color: #fff;
+        border-radius: 2px;
+        font-family: "Gilroy";
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+
+        &:hover {
+            transition: all 0.5s;
+            background: $maincolorhover;
+        }
+    }
+    &__text {
+        font-family: "Gilroy";
+        font-style: normal;
+        font-weight: 400;
+        @include adaptiv-value("font-size", 12, 10, 1);
+        line-height: 16px;
+        color: #8a8a8a;
+        display: flex;
+        align-items: center;
+        margin-left: 16px;
+        img {
+            padding-right: 8px;
+        }
+    }
+}
+@media (max-width: 590px) {
+    .footer-card {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        &__btn {
+            margin-top: 12px;
+            width: 100%;
+        }
+        &__text {
+            margin: 0;
+        }
+    }
+}
+// .form {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 10px;
+// }
+
+.image {
+    padding: 10px;
+}

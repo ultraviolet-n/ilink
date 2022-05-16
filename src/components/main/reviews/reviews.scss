@@ -1,0 +1,63 @@
+@import "../../../adaptive.scss";
+
+.reviews {
+    @include adaptiv-value("padding-top", 56, 20, 1);
+    @include adaptiv-value("padding-bottom", 32, 24, 1);
+    @include adaptiv-value("padding-right", 56, 15, 1);
+    @include adaptiv-value("margin-left", -80, -17, 1);
+    @include adaptiv-value("margin-bottom", 106, 82, 1);
+    background: #fff;
+    border-radius: 2px;
+    max-width: 1062px;
+    min-height: 525px;
+    font-family: Factor A;
+}
+.reviews-content {
+    @include adaptiv-value("padding-left", 78, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__title {
+        @include adaptiv-value("font-size", 68, 32, 1);
+        letter-spacing: -0.0124em;
+        font-weight: 500;
+        color: #333333;
+    }
+    &__openbtn {
+        @include adaptiv-value("padding-top", 17, 12, 1);
+        @include adaptiv-value("padding-bottom", 17, 12, 1);
+        @include adaptiv-value("padding-right", 28, 12, 1);
+        @include adaptiv-value("padding-left", 28, 12, 1);
+        background: $maincolor;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 0.01em;
+        color: #fff;
+        font-family: Gilroy;
+        transition: all 0.5s;
+        &:hover {
+            background: $maincolorhover;
+            transition: all 0.5s;
+        }
+        span {
+            &::before {
+                padding-right: 10px;
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .openbtn {
+        &-text {
+            display: none;
+        }
+        span {
+            &::before {
+                padding: 0;
+            }
+        }
+    }
+}

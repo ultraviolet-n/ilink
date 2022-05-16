@@ -5,6 +5,10 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+
+}
+body.active{
+  overflow: hidden;
 }
 .root {
   background: #585cc6 url("../public/image/main/back.svg") 100% 0 no-repeat;
