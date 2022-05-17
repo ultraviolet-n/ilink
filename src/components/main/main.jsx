@@ -7,7 +7,7 @@ const Main = (props) => {
         <main className="main">
             <div className="container">
                 <Aboutme />
-                <Reviews />
+                <Reviews state={props.state} />
             </div>
         </main>
     )

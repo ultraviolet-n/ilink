@@ -1,0 +1,54 @@
+@import "../../../../../adaptive.scss";
+
+.slide {
+    width: 100%;
+    min-height: 279px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f5;
+    height: 100%;
+}
+.slide__content {
+    border-radius: 2px;
+    @include adaptiv-value("padding-top", 24, 16, 1);
+    @include adaptiv-value("padding-bottom", 24, 16, 1);
+    @include adaptiv-value("padding-right", 24, 12, 1);
+    @include adaptiv-value("padding-left", 24, 12, 1);
+}
+.header-slide {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 12px;
+    justify-content: space-between;
+    font-family: "Factor A";
+    @include adaptiv-value("padding-bottom", 24, 12, 1);
+    &__name {
+        display: flex;
+        align-items: center;
+        @include adaptiv-value("font-size", 24, 16, 1);
+        font-weight: 500;
+        line-height: 24px;
+        letter-spacing: -0.0124em;
+        color: #333333;
+        img {
+            @include adaptiv-value("padding-right", 20, 8, 1);
+            border-radius: 2px;
+        }
+    }
+    &__date {
+        @include adaptiv-value("font-size", 14, 10, 1);
+        @include adaptiv-value("line-height", 22, 14, 1);
+        font-weight: 400;
+        color: #8a8a8a;
+    }
+}
+.slide__content-body {
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
+    @include adaptiv-value("font-size", 14, 10, 1);
+    @include adaptiv-value("line-height", 22, 20, 1);
+}

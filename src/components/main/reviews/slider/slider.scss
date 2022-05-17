@@ -1,0 +1,13 @@
+@import "../../../../adaptive.scss";
+.slider {
+ 
+    @include adaptiv-value("padding-top", 38, 21, 1);
+    @include adaptiv-value("padding-left", 78, 0, 1);
+    width: 100%;
+}
+.slider-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 32px;
+}
