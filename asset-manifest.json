@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ilink/static/css/main.07f6346e.css",
-    "main.js": "/ilink/static/js/main.c8e18a0b.js",
+    "main.js": "/ilink/static/js/main.e2e23550.js",
     "static/js/787.0bb21c10.chunk.js": "/ilink/static/js/787.0bb21c10.chunk.js",
     "static/media/Gilroy-MediumItalic.svg": "/ilink/static/media/Gilroy-MediumItalic.57c6cde83cebc58a8876.svg",
     "static/media/Gilroy-Medium.svg": "/ilink/static/media/Gilroy-Medium.670ddfce6d886cbbc0da.svg",
@@ -52,11 +52,11 @@
     "static/media/redbubbles.svg": "/ilink/static/media/redbubbles.2337e197c658b8fcd277.svg",
     "index.html": "/ilink/index.html",
     "main.07f6346e.css.map": "/ilink/static/css/main.07f6346e.css.map",
-    "main.c8e18a0b.js.map": "/ilink/static/js/main.c8e18a0b.js.map",
+    "main.e2e23550.js.map": "/ilink/static/js/main.e2e23550.js.map",
     "787.0bb21c10.chunk.js.map": "/ilink/static/js/787.0bb21c10.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.07f6346e.css",
-    "static/js/main.c8e18a0b.js"
+    "static/js/main.e2e23550.js"
   ]
 }
